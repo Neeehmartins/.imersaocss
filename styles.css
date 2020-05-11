@@ -1,0 +1,40 @@
+body {
+    background-image: url('https://i.imgur.com/iWBk7rH.jpg');
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-size: auto 100vw 100vh;
+    height:100vh;
+}
+.menu {
+    background-color: rgb(0, 0, 0);
+    color: black;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.site-title {
+    text-align: center;
+    color:black;
+}
+
+.site-subtitle {
+    text-align: center;
+    color:white;
+}
