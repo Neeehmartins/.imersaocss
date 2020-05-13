@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url('https://i.imgur.com/iWBk7rH.jpg');
+    background-image: url('https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a15754195893a3d_16.%20Medium%20Purple.jpg');
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-size: auto 100vw 100vh;
     height:100vh;
@@ -25,6 +25,13 @@ body {
  }
 }
 
+/* breakpoint */
+@media (min-width:1200px) {
+    body {
+        font-size: 20px;
+ }
+}
+
 header {
     height: 100vh;
     display: flex;
@@ -39,51 +46,92 @@ header {
     top:0;
 }
 
-.menu a {
-   display: block;
-   padding:10px 20px;
-}
-
-a {
-    text-decoration: none;
-    color:white;
-}
-
-a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
 .menu ul {
     display: flex;
-    justify-content: space-evenly;
-}u
-
-.menu li {
-    list-style: none;
-}
-
-.site-title {
+    justify-content: space-around;
+  }
+  
+  .menu li {
+   list-style: none; 
+  }
+  
+  .menu a {
+    
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle, 
+  .site-title {
+    color: black;
     text-align: center;
+  }
+  
+  .site-title {
+    font-size: 3em;
+    font-family:'Homemade Apple', cursive;
+  }
+  
+  .site-subtitle {
+   color:rgba(211, 211, 211, 0.513) 
+   line-height: 1.8em;
+  }
+
+  .portfolio {
+    padding: 2em;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .portfolio h2 {
     color:black;
-}
-
-.site-subtitle {
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+  
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    
+  }
+  
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: repeat(3, 260px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+  
+  .portfolio figure {
     text-align: center;
-    color:white;
-}
-
-.img-portfolio {
-    height:180px;
-    width:210px;
-}
-
- figure {
-    text-align: center;
-    padding: 8px;
- }
-
- h2 {
-    text-align: center;
-    padding: 8px;
- }
+  }
+  
+  .img-portfolio {
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 400ms ease;
+  }
+  
