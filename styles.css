@@ -5,10 +5,11 @@
 }
 
 body {
-    background-image: url('https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a15754195893a3d_16.%20Medium%20Purple.jpg');
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url('');
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-size: auto 100vw 100vh;
     height:100vh;
+    
 }
 
 /* breakpoint */
@@ -31,36 +32,53 @@ body {
         font-size: 20px;
  }
 }
-
+/*cabeçalho*/
 header {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+/*menu*/
 .menu {
     background-color: rgb(0, 0, 0);
     color: black;
     position: fixed;
     width: 100vw;
     top:0;
+    z-index: 1;
 }
 
 .menu ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
   }
   
   .menu li {
    list-style: none; 
+   background:none;
+   border-radius: 5;
+   margin:0 1em 0;
   }
   
   .menu a {
     
     display: block;
     padding: 10px 20px;
+    transition: background-color, 0.2s, color 0.2s;
   }
   
+  .menu a:active,
+  .menu a:hover{
+    background-color:white;
+    color:black;
+    border-radius: 03px;
+    text-decoration: none;
+  }
+
+
   a {
     color: white;
     text-decoration: none;
@@ -69,6 +87,22 @@ header {
   a:hover {
     text-decoration: underline;
   }
+
+ .titulo {
+   transition: scale(0.2) translateY(50vh);
+   opacity: 0;
+   animation: linear 2s animacaoTitulo forwards;
+ } 
+
+ @keyframes animacaoTitulo {
+  
+  100% {
+    transition: scale(1) translateY(0);
+    opacity: 1;
+  }
+   
+ }
+
   
   .site-subtitle, 
   .site-title {
@@ -82,16 +116,19 @@ header {
   }
   
   .site-subtitle {
-   color:rgba(211, 211, 211, 0.513) 
+   color:rgb(156, 9, 88);
    line-height: 1.8em;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
+  .contato,
   .portfolio {
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
   }
   
+  .contato h2,
   .portfolio h2 {
     color:black;
     margin-bottom: 1.5em;
@@ -121,17 +158,70 @@ header {
   
   .portfolio figure {
     text-align: center;
+    
+    
   }
   
   .img-portfolio {
+    margin-top: 15px;
     height: 180px;
     width: 240px;
     object-fit: cover;
-    object-position: left bottom;
-    border-radius: 10px;
-    position: relative;
-    box-sizing: border-box;
+    object-position: bottom;
+    transition: 500ms;
+    transform: scale(1);
+
+    border-radius: 2px;
     cursor: pointer;
-    transition: all 400ms ease;
+    
   }
+
   
+  .img-portfolio:hover {
+    transform: scale(1.2);
+
+  } 
+ 
+.contato{
+  min-height: 10vh;
+  margin-bottom: 3em;
+}  
+.contato .icons{  
+  text-align:center;
+  color:whitesmoke;
+  
+}  
+.contato a {
+  font-size: 2em;
+  transition: text-shadow 1s;
+  color:black;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 1px 5px black
+}
+
+#footer_global{
+  width: 100%;
+  bottom: 0;
+  background-color:rgb(156, 9, 88);;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+}
+#footer{
+  
+  width: 10px;
+  height: 5px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  background-color:rgb(156, 9, 88);;
+ 
+  
+  
+   
+}
